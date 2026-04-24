@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #000;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.row {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.row.groupBtn {
+    display: flex;
+    align-items: center;
+    gap: 58px;
+}
+
+.row label {
+    width: 150px;
+}
+.row button {
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    margin: 15px 15px;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 6;
+    max-height: 100vh;
+    border: 1px solid #000;
+    padding: 0 clamp(8px, 4vw, 20px);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+}
+.dot {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.dotWrapper {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+    transition: opacity 0.3s ease, transform 0.3s ease,
+        background-color 0.3s ease;
+    pointer-events: auto;
+}
+
+.game-container + div {
+    font-size: large;
+}
+
+@media (orientation: portrait) {
+    .game-container {
+        height: 60vh;
+        aspect-ratio: auto;
+    }
+}
+@media (max-width: 1200px) {
+    .game-container {
+        width: calc(100% - 24px);
+        margin: 0 auto;
+    }
+}
